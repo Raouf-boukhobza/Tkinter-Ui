@@ -1,6 +1,5 @@
 import pymysql
-import tkinter as tk
-from tkinter import messagebox
+
 
 
 def create_connection():
@@ -13,7 +12,7 @@ def create_connection():
         )
       print("Successfully connected using PyMySQL")
       return connection
-    except Error as e:
+    except pymysql.Error as e:
         print(f"Error: '{e}' occurred")
         return None
     
