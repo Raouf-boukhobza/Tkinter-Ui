@@ -4,6 +4,7 @@ import pymysql
 from widgets import *
 from PIL import Image
 from tkinter import messagebox
+import pillow_avif
 
 # Insert data into the database
 def insert_data():
@@ -70,8 +71,8 @@ button.grid(row = 5 , column = 1 , padx = (75 , 0) , pady = (15 , 0))
 inputs_frame.pack( side='left', padx =100,pady = 50 , fill = 'both')
 
   #display the image 
-image = ctk.CTkImage(Image.open("photo3.jpg"), size=(600, 700))
-image_label = ctk.CTkLabel(master=window, image=image, text="" , corner_radius=16)
+image = ctk.CTkImage(Image.open("lastt.jpg"), size=(700, 700)  )
+image_label = ctk.CTkLabel(master=window,corner_radius=50 ,image=image, text="")
 image_label.pack(side  ='left'  , fill = "both", padx = 20 , pady = 10 )
 
 
