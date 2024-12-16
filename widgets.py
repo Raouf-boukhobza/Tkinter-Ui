@@ -38,7 +38,7 @@ def create_list(list_option , window , textvar  , text , textOption) :
   label.pack( fill = 'x' , padx =6)
   # Define a function to capture the selected value
   def on_select(choice):
-     textvar = choice
+     textvar.set(choice)
      print(choice)
 
   frame1 = ctk.CTkFrame(frame  , width=500 , fg_color="white" , border_width=1 , border_color="red" )
