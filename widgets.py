@@ -16,15 +16,15 @@ def create_entry(window , text , textVariable):
     return frame
   
   
-def create_lable(window):
+def create_lable(window , text , image):
   frame = ctk.CTkFrame(master=window , fg_color="white")
   #display the image 
-  image = ctk.CTkImage(Image.open("images1.png"), size=(40, 40))
+  image = ctk.CTkImage(Image.open(image), size=(40, 40))
   image_label = ctk.CTkLabel(master=frame, image=image, text="")
   image_label.pack(side  ='left' , padx = 10 )
   
   #display the text 
-  title_label = ctk.CTkLabel(master=frame, text="Registration Form", text_color="#5D3FD3" , font=("Courier New", 40, "bold"))
+  title_label = ctk.CTkLabel(master=frame, text=text, text_color="#5D3FD3" , font=("Courier New", 40, "bold"))
   title_label.pack(side = "left")
   return frame
 
@@ -56,7 +56,7 @@ def create_list(list_option , window , textvar  , text , textOption) :
     fg_color="White", 
     corner_radius=0,
   
-    button_color="#5D3FD3", 
+    button_color="white", 
     button_hover_color="#372C84"
  )
 # Set the default value
